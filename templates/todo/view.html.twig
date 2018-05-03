@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">#{{ todo.id }}</li>
+        <li class="list-group-item list-group-item-primary">{{ todo.name }}</li>
+        <li class="list-group-item">Category: {{ todo.category }}</li>
+        <li class="list-group-item">Description:
+            <p>{{ todo.description }}</p>
+        </li>
+        <li class="list-group-item">Due date: {{ todo.todoDate | date('d-m-Y') }}</li>
+        <li class="list-group-item">Created: {{ todo.createDate | date('d-m-Y') }}</li>
+    </ul>
+{% endblock %}
